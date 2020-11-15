@@ -212,6 +212,9 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
+# Camera
+PRODUCT_PACKAGES += SnapdragonCamera2
+
 # Common init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
