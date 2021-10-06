@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+# PRODUCT_COPY_FILES directives.
 BUILD_BROKEN_DUP_RULES := true
 
 BOARD_VENDOR := oneplus
@@ -53,7 +53,7 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8250
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := vendor/kona-perf_defconfig
-TARGET_KERNEL_CLANG_VERSION := proton
+#TARGET_KERNEL_CLANG_VERSION := proton
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
@@ -105,7 +105,6 @@ USE_CUSTOM_AUDIO_POLICY := 1
 
 # Bluetooth
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
-TARGET_USE_QTI_BT_STACK := true
 
 # Camera
 TARGET_CAMERA_NEEDS_CLIENT_INFO := true
@@ -141,8 +140,9 @@ TARGET_SURFACEFLINGER_FOD_LIB := //$(COMMON_PATH):libfod_extension.oneplus_kona
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(COMMON_PATH)/device_framework_matrix.xml \
-    vendor/dot/config/device_framework_matrix.xml
+    $(COMMON_PATH)/device_framework_matrix.xml
+
+#    vendor/dot/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
@@ -201,8 +201,9 @@ VENDOR_SECURITY_PATCH := 2021-09-01
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
