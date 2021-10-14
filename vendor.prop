@@ -23,7 +23,6 @@ ro.config.media_vol_steps=30
 ro.vendor.audio.sdk.fluencetype=fluence
 ro.config.vc_call_vol_steps=9
 ro.vendor.audio.sdk.ssr=false
-ro.vendor.dolby.dax.version=DAX3_3.5.6.11_r1
 vendor.audio.adm.buffering.ms=2
 vendor.audio.dolby.ds2.enabled=false
 vendor.audio.dolby.ds2.hardbypass=false
@@ -65,7 +64,7 @@ vendor.audio.feature.record_play_concurency.enable=false
 vendor.audio.feature.snd_mon.enable=true
 vendor.audio.feature.spkr_prot.enable=false
 vendor.audio.feature.src_trkn.enable=true
-vendor.audio.feature.ssrec.enable=true
+vendor.audio.feature.ssrec.enable=false
 vendor.audio.feature.usb_offload.enable=true
 vendor.audio.feature.usb_offload_burst_mode.enable=true
 vendor.audio.feature.usb_offload_sidetone_volume.enable=false
@@ -150,6 +149,9 @@ vendor.display.use_smooth_motion=1
 # DRM
 drm.service.enabled=true
 
+# Dolby
+ro.vendor.dolby.dax.version=DAX3_3.5.1.28_r1
+
 # Fingerprint
 persist.vendor.qfp=true
 
@@ -163,7 +165,7 @@ vendor.gatekeeper.disable_spu=true
 persist.backup.ntpServer=0.pool.ntp.org
 
 # Graphics
-debug.egl.hw=1
+debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
@@ -171,7 +173,7 @@ debug.sf.high_fps_early_gl_phase_offset_ns=-4000000
 debug.sf.high_fps_early_phase_offset_ns=-4000000
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-4000000
-debug.sf.hw=1
+debug.sf.hw=0
 debug.sf.latch_unsignaled=1
 persist.demo.hdmirotationlock=false
 persist.sys.sf.color_mode=0

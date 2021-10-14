@@ -51,7 +51,6 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
 
     private SwitchPreference mAlwaysOnDisplayPreference;
 
-    private ListPreference mPickUpPreference;
     private SwitchPreference mPocketPreference;
 
     private Handler mHandler = new Handler();
@@ -75,14 +74,8 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
         mAlwaysOnDisplayPreference.setChecked(DozeUtils.isAlwaysOnEnabled(getActivity()));
         mAlwaysOnDisplayPreference.setOnPreferenceChangeListener(this);
 
-        PreferenceCategory pickupSensorCategory = (PreferenceCategory) getPreferenceScreen().
-                findPreference(DozeUtils.CATEG_PICKUP_SENSOR);
         PreferenceCategory proximitySensorCategory = (PreferenceCategory) getPreferenceScreen().
                 findPreference(DozeUtils.CATEG_PROX_SENSOR);
-
-        mPickUpPreference = (ListPreference) findPreference(DozeUtils.GESTURE_PICK_UP_KEY);
-        mPickUpPreference.setEnabled(dozeEnabled);
-        mPickUpPreference.setOnPreferenceChangeListener(this);
 
         mPocketPreference = (SwitchPreference) findPreference(DozeUtils.GESTURE_POCKET_KEY);
         mPocketPreference.setEnabled(dozeEnabled);
@@ -92,7 +85,6 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
         if (!DozeUtils.alwaysOnDisplayAvailable(getActivity())) {
             getPreferenceScreen().removePreference(mAlwaysOnDisplayPreference);
         } else {
-            pickupSensorCategory.setDependency(DozeUtils.ALWAYS_ON_DISPLAY);
             proximitySensorCategory.setDependency(DozeUtils.ALWAYS_ON_DISPLAY);
         }
     }
@@ -151,7 +143,6 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
         }
         mAlwaysOnDisplayPreference.setEnabled(isChecked);
 
-        mPickUpPreference.setEnabled(isChecked);
         mPocketPreference.setEnabled(isChecked);
     }
 

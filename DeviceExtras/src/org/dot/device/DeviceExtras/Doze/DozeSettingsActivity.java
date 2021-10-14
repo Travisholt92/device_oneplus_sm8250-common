@@ -19,9 +19,8 @@ package org.dot.device.DeviceExtras.doze;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import org.dot.device.DeviceExtras.doze.MonetPreferenceActivity;
 
-public class DozeSettingsActivity extends MonetPreferenceActivity {
+public class DozeSettingsActivity extends PreferenceActivity {
 
     private static final String TAG_DOZE = "doze";
 
