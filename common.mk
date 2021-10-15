@@ -189,9 +189,25 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor
+  android.hardware.bluetooth@1.0.vendor \
+  android.hardware.bluetooth@1.1.vendor \
+  android.hardware.bluetooth@1.0-service-qti \
+  vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+  vendor.qti.hardware.btconfigstore@1.0.vendor \
+  vendor.qti.hardware.btconfigstore@1.1 \
+  vendor.qti.hardware.btconfigstore@1.1.vendor \
+  vendor.qti.hardware.btconfigstore@1.2 \
+  vendor.qti.hardware.btconfigstore@1.2.vendor \
+  vendor.qti.hardware.btconfigstore@1.3 \
+  vendor.qti.hardware.btconfigstore@1.3.vendor \
+  vendor.qti.hardware.btconfigstore@2.1 \
+  vendor.qti.hardware.btconfigstore@2.1.vendor \
+  vendor.qti.hardware.btconfigstore@2.2 \
+  vendor.qti.hardware.btconfigstore@2.2.vendor \
+  vendor.qti.hardware.btconfigstore@2.3 \
+  vendor.qti.hardware.btconfigstore@2.3.vendor \
+  vendor.qti.hardware.btconfigstore@2.0 \
+  vendor.qti.hardware.btconfigstore@2.0.vendor
 
 # Boot control
 PRODUCT_PACKAGES += \
@@ -511,14 +527,6 @@ PRODUCT_PACKAGES += \
     libstdc++.vendor
 
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth@1.1.vendor \
-    android.hardware.gnss@2.1 \
-    android.hardware.gnss@2.1.vendor \
-    android.hardware.gnss.measurement_corrections@1.1 \
-    android.hardware.gnss.measurement_corrections@1.1.vendor \
-    android.hardware.gnss.visibility_control@1.0 \
-    android.hardware.gnss.visibility_control@1.0.vendor \
     android.hardware.gatekeeper@1.0 \
     android.hardware.gatekeeper@1.0.vendor \
     android.hardware.keymaster@4.1 \
@@ -558,7 +566,28 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3 \
     android.hardware.neuralnetworks@1.3.vendor \
     android.hardware.radio.deprecated@1.0 \
-    android.hardware.radio.deprecated@1.0.vendor
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.gnss@1.0 \
+    android.hardware.gnss@1.0.vendor \
+    android.hardware.gnss@1.1 \
+    android.hardware.gnss@1.1.vendor \
+    android.hardware.gnss@1.2 \
+    android.hardware.gnss@1.2.vendor \
+    android.hardware.gnss@1.3 \
+    android.hardware.gnss@1.3.vendor \
+    android.hardware.gnss@2.0 \
+    android.hardware.gnss@2.0.vendor \
+    android.hardware.gnss@2.1 \
+    android.hardware.gnss@2.1.vendor \
+    android.hardware.gnss@2.1-service-qti \
+    android.hardware.gnss@2.2 \
+    android.hardware.gnss@2.2.vendor \
+    android.hardware.gnss@2.3 \
+    android.hardware.gnss@2.3.vendor \
+    android.hardware.gnss.measurement_corrections@1.1 \
+    android.hardware.gnss.measurement_corrections@1.1.vendor \
+    android.hardware.gnss.visibility_control@1.0 \
+    android.hardware.gnss.visibility_control@1.0.vendor
 
 # Vibrator
 PRODUCT_PACKAGES += \
