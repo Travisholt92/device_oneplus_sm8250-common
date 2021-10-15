@@ -172,4 +172,8 @@
     <string name="dolby_title">Dolby Atmos</string>
     <string name="dolby_summary">Configure the audio output based on media content</string>
 
+    <!-- Touchscreen gestures -->
+    <string name="touchscreen_gesture_settings_title">Touchscreen gestures</string>
+    <string name="touchscreen_gesture_settings_summary">Perform various touchscreen gestures for quick actions</string>
+    <string name="screen_gestures_panel_title">Screen Off Gestures</string>
 </resources>
